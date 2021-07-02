@@ -28,6 +28,14 @@ public class LoginPage extends BasePage {
 	public WebElement getGotItButton() {
 		return gotItButton;
 	}
+	 @FindBy(id="email")
+	 private WebElement EmailButton;
+	 
+	 public WebElement getEmailButton()
+	 {
+		 return EmailButton;
+	 }
+	 
 	
 	
 	
