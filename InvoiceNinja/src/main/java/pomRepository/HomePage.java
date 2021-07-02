@@ -26,6 +26,20 @@ public class HomePage extends BasePage {
 	@FindBy(id="closeSignUpButton")
 	private WebElement closeSignUpButton;
 	
+	@FindBy(xpath="//a[contains(text(),'Clients')]")
+	private WebElement clientLink;
+	
+	public WebElement getClientLink() {
+		return clientLink;
+	}
+
+	public WebElement getProductsLink() {
+		return productsLink;
+	}
+
+	@FindBy(xpath="//a[contains(text(),'Products')]") 
+	private WebElement productsLink;
+	
 	public WebElement getGuestDropDown() {
 		return guestDropDown;
 	}
