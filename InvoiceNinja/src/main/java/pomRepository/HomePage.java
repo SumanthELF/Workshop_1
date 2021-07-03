@@ -13,7 +13,26 @@ public class HomePage extends BasePage {
 	public HomePage(WebDriver driver){
 		super(driver);
 	}
+	@FindBy(partialLinkText="Projects")
+	private WebElement projectsTab;
 	
+	@FindBy(linkText="Clients")
+	private WebElement ClientsButton;
+	
+	@FindBy(linkText="Credits")
+	private WebElement CreditsButton;
+	
+	public WebElement getClientsButton() {
+		return ClientsButton;
+	}
+
+	public WebElement getCreditsButton() {
+		return CreditsButton;
+	}
+
+	public WebElement getProjectsTab() {
+		return projectsTab;
+	}
 	@FindBy(id="myAccountButton")
 	private WebElement guestDropDown;
 	
