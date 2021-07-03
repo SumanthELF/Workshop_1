@@ -17,7 +17,7 @@ public class VendorPage extends BasePage {
 	}
 	
 	@FindBy(xpath = "//a[.='New Vendor ']")
-	private WebElement VendorButton;
+	private WebElement newVendorButton;
 	
 	@FindBy(id = "name")
 	private WebElement nameTextBox;
@@ -44,7 +44,7 @@ public class VendorPage extends BasePage {
 
 
 	public WebElement getNewVendorButton() {
-		return VendorButton;
+		return newVendorButton;
 	}
 	
 
