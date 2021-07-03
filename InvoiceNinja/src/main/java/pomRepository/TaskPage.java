@@ -25,6 +25,20 @@ public class TaskPage extends BasePage {
 	@FindBy(id="search")
 	private WebElement searchBar;
 	
+	@FindBy(xpath="//div[text()='Backlog']/../../..//div[text()='health']")
+	private WebElement DragfromBacklog;
+	
+	@FindBy(xpath="//div[text()='Done']/../../..//a[contains(text(),'New Task...')]")
+	private WebElement DropToDone; 
+	
+	public WebElement getDragfromBacklog() {
+		return DragfromBacklog;
+	}
+
+	public WebElement getDropToDone() {
+		return DropToDone;
+	}
+
 	public WebElement getSearchBar() {
 		return searchBar;
 	}
