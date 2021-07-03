@@ -26,8 +26,11 @@ public class HomePage extends BasePage {
 	@FindBy(id="closeSignUpButton")
 	private WebElement closeSignUpButton;
 	
-	@FindBy(xpath="//a[contains(text(),'Clients')]")
+	@FindBy(linkText="Clients")
 	private WebElement clientLink;
+	
+	@FindBy(linkText="Products") 
+	private WebElement productsLink;
 	
 	public WebElement getClientLink() {
 		return clientLink;
@@ -37,9 +40,6 @@ public class HomePage extends BasePage {
 		return productsLink;
 	}
 
-	@FindBy(xpath="//a[contains(text(),'Products')]") 
-	private WebElement productsLink;
-	
 	public WebElement getGuestDropDown() {
 		return guestDropDown;
 	}
