@@ -12,16 +12,16 @@ public class TaskPage extends BasePage {
 	}
 	@FindBy(xpath="//div[text()='Backlog']/../../..//textarea[contains(@data-bind,'value: descripti')]") 
 	private WebElement newtasksendvalue;
-	
+
 	@FindBy(xpath="//a[contains(text(),'Kanban')] ")
 	private WebElement kanbanlink;
-	
+
 	@FindBy(xpath="//div[text()='Backlog']/../../..//a[contains(text(),'New Task...')]")
 	private WebElement clickNewTask;
-	
+
 	@FindBy(xpath="//div[text()='Backlog']/../../..//button[contains(text(),'Save')]") 
 	private WebElement saveButton;
-	
+
 	@FindBy(id="search")
 	private WebElement searchBar;
 	@FindBy(id="search")
@@ -54,6 +54,22 @@ public class TaskPage extends BasePage {
 	}
 	@FindBy(xpath="//input[@placeholder='End Time']")
 	private WebElement endtime;
+
+	@FindBy(xpath="//div[text()='Backlog']/../../..//div[text()='health']")
+	private WebElement DragfromBacklog;
+
+	@FindBy(xpath="//div[text()='Done']/../../..//a[contains(text(),'New Task...')]")
+	private WebElement DropToDone; 
+
+
+	public WebElement getDragfromBacklog() {
+		return DragfromBacklog;
+	}
+
+	public WebElement getDropToDone() {
+		return DropToDone;
+	}
+
 	public WebElement getTimer() {
 		return timerradiobutton;
 	}
@@ -84,7 +100,7 @@ public class TaskPage extends BasePage {
 	public WebElement getDescription() {
 		return description;
 	}
-	
+
 	public WebElement getSearchBar() {
 		return searchBar;
 	}
@@ -100,6 +116,6 @@ public class TaskPage extends BasePage {
 	}
 	public WebElement getNewtasksendvalue() {
 		return newtasksendvalue;
-	
-}
+
+	}
 }

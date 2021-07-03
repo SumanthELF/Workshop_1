@@ -45,6 +45,77 @@ public class ExpensesPage extends BasePage {
 
 	@FindBy(xpath="//td[text()='17']")
 	private WebElement Date ;
+
+	@FindBy(id="search")
+	private WebElement searchTextField;
+	
+	@FindBy(xpath="//a[text()='Enter Expense ']")
+	private WebElement ExpenseLink;
+	
+	@FindBy(id="vendor_name")
+	private WebElement vendorNmaeTextField;
+	
+	@FindBy(id="expense_category_name")
+	private WebElement CatogariTextField;
+	
+	@FindBy(id="amount")
+	private WebElement amountTextField;
+	
+	@FindBy(xpath="//input[@placeholder='US Dollar']") 
+	private WebElement USDollarTextField;
+	
+	@FindBy(xpath="//i[@class='glyphicon glyphicon-calendar']") 
+	private WebElement SelectCalender;
+	
+	@FindBy(xpath="//td[@class='today active day']")
+	private WebElement SelectDate;
+	
+	@FindBy(xpath="//button[@type='submit']")
+	private WebElement SaveButton;
+	
+	@FindBy(xpath="//a[text()='vinod kinagi'")
+	private WebElement SelectExpenses;
+
+	@FindBy(xpath="//td[@class='today active day']") 
+	private WebElement SelectDate1;
+	
+	public WebElement getSelectExpenses() {
+		return SelectExpenses;
+	}
+	
+	public WebElement getSelectDate1() {
+		return SelectDate1;}
+
+
+	
+	public WebElement getSearchTextField() {
+		return searchTextField;
+	}
+	public WebElement getExpenseLink() {
+		return ExpenseLink;
+	}
+	public WebElement getVendorNmaeTextField() {
+		return vendorNmaeTextField;
+	}
+	public WebElement getCatogariTextField() {
+		return CatogariTextField;
+	}
+	public WebElement getAmountTextField() {
+		return amountTextField;
+	}
+	public WebElement getUSDollarTextField() {
+		return USDollarTextField;
+	}
+	public WebElement getSelectCalender() {
+		return SelectCalender;
+	}
+	public WebElement getSelectDate() {
+		return SelectDate;
+	}
+	public WebElement getSaveButton() {
+		return SaveButton;
+	}
+	
 	
 
 	@FindBy(xpath="//th[text()='July 2021']")
