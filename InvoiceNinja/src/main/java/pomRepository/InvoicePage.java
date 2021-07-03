@@ -32,6 +32,26 @@ public class InvoicePage extends BasePage{
 	@FindBy(xpath="//button[@id='draftButton']")
 	private WebElement saveDraft;
 	
+	@FindBy(xpath="(//th[text()='»'])[1]")
+	private WebElement forwardButton;
+	
+	public WebElement getForwardButton() {
+		return forwardButton;
+	}
+	@FindBy(xpath="(//label[contains(text(),'Due Date')]/..//span[@class='input-group-addon'])[1]")
+	private WebElement dueIcon;
+	
+	public WebElement getDueIcon() {
+		return dueIcon;
+	}
+
+	@FindBy(xpath="//th[text()='September 2021']/../../..//td[text()='15']")
+	private WebElement dueDate;
+	
+	public WebElement getDueDate() {
+		return dueDate;
+	}
+
 	@FindBy(id="client[name]")
 	private WebElement client;
 	
