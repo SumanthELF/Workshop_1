@@ -24,34 +24,40 @@ public class TaskPage extends BasePage {
 
 	@FindBy(id="search")
 	private WebElement searchBar;
+	
 	@FindBy(id="search")
 	private WebElement searchtextFiled;
+	
 	@FindBy(xpath="//a[contains(text(),'Tasks')]")
 	private WebElement taskslink;
+	
 	@FindBy(linkText="New Task")
 	private WebElement Newtasklink;
+	
 	@FindBy(id="client")
 	private WebElement clienttextfield;
+	
 	@FindBy(xpath=("//span[@data-dropdown='dropdown']"))
 	private WebElement clientdropdown;
+	
 	@FindBy(id="project_name")
 	private WebElement projectname;
+	
 	@FindBy(id="description")
 	private WebElement description;
+	
 	@FindBy(xpath="//label[contains(text(),'Timer')]")
 	private WebElement timerradiobutton;
+	
 	@FindBy(id="start-button")
 	private WebElement startbutton;
+	
 	@FindBy(xpath="//label[contains(text(),'Manual')]")
 	private WebElement manualradiobutton;
+	
 	@FindBy(xpath="//input[@placeholder='Start Time']")
 	private WebElement starttime;
-	public WebElement getStarttime() {
-		return starttime;
-	}
-	public WebElement getEndtime() {
-		return endtime;
-	}
+	
 	@FindBy(xpath="//input[@placeholder='End Time']")
 	private WebElement endtime;
 
@@ -60,6 +66,15 @@ public class TaskPage extends BasePage {
 
 	@FindBy(xpath="//div[text()='Done']/../../..//a[contains(text(),'New Task...')]")
 	private WebElement DropToDone; 
+	
+	public WebElement getStarttime() {
+		return starttime;
+	}
+	public WebElement getEndtime() {
+		return endtime;
+	}
+	
+
 
 
 	public WebElement getDragfromBacklog() {
