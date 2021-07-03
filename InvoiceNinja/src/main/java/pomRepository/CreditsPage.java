@@ -131,7 +131,7 @@ public class CreditsPage {
 	public WebElement getAlert() {
 		return alert;
 	}
-	public WebElement getEnterCreditButton() {
+	public WebElement getenterCreditButton() {
 		return enterCreditButton;
 	}
 
@@ -147,4 +147,41 @@ public class CreditsPage {
 	public WebElement getLogOutButton() {
 		return logOutButton;
 	}
+	
+	@FindBy(xpath="((//a[.='Edit Credit'])[3]")
+	private WebElement editCreditButton;
+	
+	public WebElement geteditCreditButton()
+	{
+		return editCreditButton;
+	}
+	
+   @FindBy(xpath="(//tr[@class='even'])[1]")
+   private WebElement clientNameSelect;
+   
+   public WebElement getclientNameSelect()
+   {
+	   return clientNameSelect;
+   }
+   @FindBy(xpath="(//button[@class='btn btn-success btn-lg'])[3]" )
+	private WebElement save2Button;
+  
+   public WebElement getsave2Button()
+   {
+	   return save2Button;
+   }
+   
+   @FindBy(xpath="//a[.='Log Out']")
+   private WebElement submitButton;
+   
+   public WebElement getsubmitButton()
+   {
+	   return submitButton;
+   }
+	
+	
+	
+	
+	
+	
 }
