@@ -6,6 +6,7 @@ package products;
  
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -25,10 +26,13 @@ public class TC04_ProductsTest extends BaseTest {
 		//=========================Step 1: Click on Products Link==========================================================
 		HomePage  homepage =new HomePage(driver);
 		homepage.getProductsLink().click();
+		String Product_PageTitle="Products | Invoice Ninja";
+		Assert.assertEquals(driver.getTitle(),Product_PageTitle,"Product Page is not displayed");
 		
-		ProductPage productPage=new ProductPage(driver);
+	
 		
 		//=============Step 2 :move curser to created product============================================================
+		ProductPage productPage=new ProductPage(driver);
 		Actions action=new Actions(driver);	
 		action.moveToElement(productPage.getCreatedProduct()).perform();
 		
@@ -36,8 +40,10 @@ public class TC04_ProductsTest extends BaseTest {
 		productPage.getSelectButton().click();
 		//============Step 4:click on clone product link=============================================================
 		productPage.getCloneProductLink().click();
+		String clonePageTitle = "Edit Product | Invoice Ninja";
+		Assert.assertEquals(driver.getTitle(),clonePageTitle,"Clone Product Page is not displayed");
 		
-
+		
 	    JavascriptExecutor js =(JavascriptExecutor) driver;
 	    js.executeScript("window.scrollBy(0,100);");
 		
@@ -46,45 +52,12 @@ public class TC04_ProductsTest extends BaseTest {
 		
 		////=========================Step 6: Click on Products Link==========================================================
 		homepage.getProductsLink().click();
+		Assert.assertEquals(driver.getTitle(),Product_PageTitle,"Product Page is not displayed");
 		Reporter.log("Product Cloned Successfully",true);
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+				
 		
 	}
 }

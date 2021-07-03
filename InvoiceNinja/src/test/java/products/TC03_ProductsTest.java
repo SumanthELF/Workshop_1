@@ -27,12 +27,15 @@ public class TC03_ProductsTest extends BaseTest{
 		//=========================Step 1: Click on Products Link==========================================================
 		HomePage  homepage =new HomePage(driver);
 		homepage.getProductsLink().click();
+		String Product_PageTitle="Products | Invoice Ninja";
+		Assert.assertEquals(driver.getTitle(),Product_PageTitle,"Product Page is not displayed");
 		
 		
 		//==========================Step 2:Click on Create new Product button================================================
 		ProductPage productPage=new ProductPage(driver);
 		productPage.getCreateNewProductButton().click();
-		
+		 String CreateProduct_PageTitle="Add Product | Invoice Ninja";
+		 Assert.assertEquals(driver.getTitle(),CreateProduct_PageTitle,"Create Product Page is not displayed");
 		
 		//=============================Step 3: Enter valid INput in respective textfield====================================
 		String productName = ex.readStringDataFromExcel("Products", 0, 0);
@@ -57,7 +60,8 @@ public class TC03_ProductsTest extends BaseTest{
 		
 		////=========================Step 5: Click on Products Link==========================================================
 		homepage.getProductsLink().click();
+		Assert.assertEquals(driver.getTitle(),Product_PageTitle,"Product Page is not displayed");
 		Reporter.log("Product Created Successfully",true);
 	}
 
-}
+} 
