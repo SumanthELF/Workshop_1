@@ -4,6 +4,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import genericLibrary.BaseTest;
+import genericLibrary.ExcelUtil;
 import pomRepository.ClientsPage;
 import pomRepository.HomePage;
 import pomRepository.NewClientsPage;
@@ -18,7 +19,7 @@ public class TC01_ClientsTest extends BaseTest{
 	@Test
 	public void clients() {
 		
-		//Step1:Click on "clients" link
+		//Step1:Click on "clients" link.
 		HomePage homepage=new HomePage(driver);
         homepage.getClientLink().click();
         String expectedClientsPageTitle = "Clients | Invoice Ninja";

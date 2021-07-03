@@ -21,7 +21,7 @@ public class TC02_ClientsTest extends BaseTest {
      @Test
     public void editClient() {
     	 
-    	//Step1:Click on "clients" link
+    	//Step1:Click on "clients" link.
 	   HomePage homepage=new HomePage(driver);
        homepage.getClientLink().click();
        String expectedClientsPageTitle = "Clients | Invoice Ninja";
