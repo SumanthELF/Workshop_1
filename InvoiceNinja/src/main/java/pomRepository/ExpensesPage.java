@@ -50,6 +50,23 @@ public class ExpensesPage extends BasePage {
 	@FindBy(xpath="//th[text()='July 2021']")
 	private WebElement monthyear;
 	
+	@FindBy(xpath="//a[text()='vinod kinagi'")
+	private WebElement SelectExpenses;
+
+	@FindBy(xpath="//td[@class='today active day']")
+	private WebElement SelectDate1;
+
+
+
+	
+	public WebElement getSelectExpenses() {
+		return SelectExpenses;
+	}
+
+	public WebElement getSelectDate1() {
+		return SelectDate1;
+	}
+
 	public WebElement getPayment_date() {
 		return payment_date;
 	}
