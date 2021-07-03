@@ -1,7 +1,10 @@
 package pomRepository;
 
+import javax.swing.plaf.basic.BasicSliderUI.ActionScroller;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
 import org.openqa.selenium.support.FindBy;
 /***
  * 
@@ -26,6 +29,29 @@ public class HomePage extends BasePage {
 	@FindBy(id="closeSignUpButton")
 	private WebElement closeSignUpButton;
 	
+	@FindBy(xpath = "//li[@class='nav-vendors ']")
+	private WebElement vendorsButton;
+	
+	@FindBy(xpath="//a[text()='Enter Expense ']")
+	private WebElement EnterExpenses;
+	
+	
+	
+	public WebElement getEnterExpenses() {
+		return EnterExpenses;
+	}
+
+	@FindBy(id = "search")
+	private WebElement searchBox;
+	
+	public WebElement getSearchBox() {
+		return searchBox;
+	}
+
+	public WebElement getVendorsButton() {
+		return vendorsButton;
+	}
+
 	public WebElement getGuestDropDown() {
 		return guestDropDown;
 	}
@@ -39,6 +65,7 @@ public class HomePage extends BasePage {
 	}
 	
 	public WebElement getCloseSignUpButton() {
+		
 		return closeSignUpButton;
 	}
 

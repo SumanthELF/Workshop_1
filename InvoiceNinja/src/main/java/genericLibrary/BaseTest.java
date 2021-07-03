@@ -86,11 +86,7 @@ public class BaseTest implements IAutoConstants {
 		driver.quit();
 	}
 	
-	@Test
-	public void me() {
-		
-	}
-
+	
 }
 
 
