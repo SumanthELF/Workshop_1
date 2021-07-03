@@ -23,5 +23,18 @@ public class ClientsPage {
 	public WebElement getEditClientDropdown() {
 		return editClientDropdown;
 	}
+	@FindBy(xpath="//button[contains(text(),'Select ')]")
+	private WebElement selectDropdown;
+
+	public WebElement getselectDropdown() {
+		return selectDropdown;
+	}
+	
+	@FindBy(linkText="Edit Client")
+	private WebElement editClient;
+
+	public WebElement geteditClient() {
+		return editClient;
+	}
 
 }
