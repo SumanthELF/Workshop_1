@@ -44,7 +44,7 @@ public class VendorPage extends BasePage {
 
 
 	public WebElement getNewVendorButton() {
-		return newVendorButton;
+		return VendorButton;
 	}
 	
 
