@@ -29,9 +29,24 @@ public class HomePage extends BasePage {
 	@FindBy(xpath="(//a[contains(.,'Invoices')])[2]")
 	private WebElement invoice; 
 	
+  	@FindBy(linkText="Clients")
+	private WebElement clientLink;
+	
+	@FindBy(linkText="Products") 
+	private WebElement productsLink;
+  
 	public WebElement getInovice() {
 		return invoice;
 	}
+	
+	public WebElement getClientLink() {
+		return clientLink;
+	}
+
+	public WebElement getProductsLink() {
+		return productsLink;
+	}
+
 	public WebElement getGuestDropDown() {
 		return guestDropDown;
 	}
