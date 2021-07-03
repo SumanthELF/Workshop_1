@@ -9,7 +9,7 @@ public class StatusPage {
 	public StatusPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(xpath="//button[text()='Download ']")
+	@FindBy(xpath="//a[text()='View Client']/..//button[@class='btn btn-default']")
 	private WebElement viewStatus;
 
 	public WebElement getViewStatement() {
