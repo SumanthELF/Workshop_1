@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Successfully Launched Chrome Browser]]>
+    </line>
+    <line>
+      <![CDATA[Browser window is maximized successfully]]>
+    </line>
+    <line>
+      <![CDATA[Login page is displayed successfully]]>
+    </line>
+    <line>
+      <![CDATA[Username is entered successfully]]>
+    </line>
+    <line>
+      <![CDATA[Username is entered successfully]]>
+    </line>
+    <line>
+      <![CDATA[Homepage is displayed successfully]]>
+    </line>
+    <line>
+      <![CDATA[Quotes page should be displayed]]>
+    </line>
+    <line>
+      <![CDATA[Create page should be displayed]]>
+    </line>
+    <line>
+      <![CDATA[client popup should be displayed]]>
+    </line>
+    <line>
+      <![CDATA[Logged out successfully]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="29896" started-at="2021-07-04T19:08:09Z" finished-at="2021-07-04T19:08:39Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="29896" started-at="2021-07-04T19:08:09Z" finished-at="2021-07-04T19:08:39Z">
+      <class name="quotes.TC_05Test">
+        <test-method status="PASS" signature="openApplication(java.lang.String)[pri:0, instance:quotes.TC_05Test@19963d8]" name="openApplication" is-config="true" duration-ms="9049" started-at="2021-07-04T19:08:09Z" finished-at="2021-07-04T19:08:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Successfully Launched Chrome Browser]]>
+            </line>
+            <line>
+              <![CDATA[Browser window is maximized successfully]]>
+            </line>
+            <line>
+              <![CDATA[Login page is displayed successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method status="PASS" signature="loginToApplication()[pri:0, instance:quotes.TC_05Test@19963d8]" name="loginToApplication" is-config="true" duration-ms="7145" started-at="2021-07-04T19:08:18Z" finished-at="2021-07-04T19:08:25Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Username is entered successfully]]>
+            </line>
+            <line>
+              <![CDATA[Username is entered successfully]]>
+            </line>
+            <line>
+              <![CDATA[Homepage is displayed successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method status="PASS" signature="TC_05QuotesTest()[pri:0, instance:quotes.TC_05Test@19963d8]" name="TC_05QuotesTest" duration-ms="10823" started-at="2021-07-04T19:08:25Z" finished-at="2021-07-04T19:08:36Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Quotes page should be displayed]]>
+            </line>
+            <line>
+              <![CDATA[Create page should be displayed]]>
+            </line>
+            <line>
+              <![CDATA[client popup should be displayed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_05QuotesTest -->
+        <test-method status="PASS" signature="logoutFromApplication()[pri:0, instance:quotes.TC_05Test@19963d8]" name="logoutFromApplication" is-config="true" duration-ms="1925" started-at="2021-07-04T19:08:36Z" finished-at="2021-07-04T19:08:38Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Logged out successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logoutFromApplication -->
+        <test-method status="PASS" signature="CloseApp()[pri:0, instance:quotes.TC_05Test@19963d8]" name="CloseApp" is-config="true" duration-ms="931" started-at="2021-07-04T19:08:38Z" finished-at="2021-07-04T19:08:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseApp -->
+      </class> <!-- quotes.TC_05Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

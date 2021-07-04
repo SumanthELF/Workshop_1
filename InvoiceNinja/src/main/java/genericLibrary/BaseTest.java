@@ -33,6 +33,8 @@ public class BaseTest implements IAutoConstants {
 	public ExcelUtil readExcelData ;
 	public WebDriverWait explicitWait;
 
+
+
 	@Parameters("browser")
 	@BeforeClass(alwaysRun=true)
 	public void openApplication(@Optional("chrome")String browserName) {
@@ -59,6 +61,7 @@ public class BaseTest implements IAutoConstants {
 		homePage = new HomePage(driver);
 		readExcelData = new ExcelUtil();		
 
+
 		//Step1 : navigate to application
 		driver.get(DEFAULT_URL);
 		String expectedLoginPageTitle = "Invoice Ninja | Free Source-Available Online Invoicing";
@@ -72,7 +75,7 @@ public class BaseTest implements IAutoConstants {
 			explicitWait.until(ExpectedConditions.elementToBeClickable(loginPage.getGotItButton()));
 			loginPage.getGotItButton().click();
 		} catch(NoSuchElementException e) {
-			
+
 		}		
 		loginPage.login(DEFAULT_USERNAME, DEFAULT_PASSWORD);
 		String expectedHomePageTitle = "Dashboard | Invoice Ninja";

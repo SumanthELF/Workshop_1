@@ -4,74 +4,64 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+/***
+ * 
+ * @author DevikaPatel
+ *
+ */
 public class RecurringPage {
-	
+
 	public RecurringPage(WebDriver driver) {
 		PageFactory.initElements(driver,this);
 	}
 
-	@FindBy(xpath="//a[contains(.,'Recurring')]//following::a[contains(.,'Recurring')]")
-	private WebElement archievedRecurring;
+	@FindBy(id="saveButton")
+	private WebElement markAsReadyButton;
 
-	public WebElement getArchievedRecurring() {
-		return archievedRecurring;
+	public WebElement getMarkAsReadyButton() {
+		return markAsReadyButton;
 	}
 
-	@FindBy(partialLinkText="Got it!")
-	private WebElement cookiesButton;
+	@FindBy(xpath="//span[@data-bind='text: getClientDisplayName(ko.toJS(client()))']")
+	private WebElement emailRecurringText;
 
-	public WebElement getCookiesButton() {
-		return cookiesButton;
+	public WebElement getEmailRecurringText() {
+		return emailRecurringText;
 	}
 
-	@FindBy(xpath="//input[@type='checkbox']//following::input[@type='checkbox']")
+	@FindBy(xpath="//button[text()='Yes']")
+	private WebElement invoiceEmailPopup;
+
+	public WebElement getInvoiceEmailPopup() {
+		return invoiceEmailPopup;
+	}
+
+	@FindBy(name="ids[]")
 	private WebElement clientCheckBox;
 
 	public WebElement getClientCheckBox() {
 		return clientCheckBox;
 	}
 
-	@FindBy(xpath="//span[@class='caret']//following::span[@class='caret']")
-	private WebElement archiveDropdown;
-
-	public WebElement getArchiveDropdown() {
-		return archiveDropdown;
-	}
-
-	@FindBy(partialLinkText="Archive Recurring Invoice")
-	private WebElement archiveRecurringInvoice;
-
-	public WebElement getArchiveRecurringInvoice() {
-		return archiveRecurringInvoice;
-	}
-
-	@FindBy(xpath="//button[@data-toggle=\"dropdown\"]//following::button[@data-toggle=\"dropdown\"]//following::button[@data-toggle=\"dropdown\"]")
+	@FindBy(xpath="//button[contains(.,'Select')]")
 	private WebElement selectDropdown;
 
-	public WebElement getSelectDropdown() {
+	public WebElement getselectDropdown() {
 		return selectDropdown;
 	}
 
-	@FindBy(partialLinkText="Clone To Invoice")
-	private WebElement cloneToInvoice;
+	@FindBy(xpath="//a[.='Clone To Quote']")
+	private WebElement clonetoQuote;
 
-	public WebElement getCloneToInvoice() {
-		return cloneToInvoice;
+	public WebElement getClonetoQuote() {
+		return clonetoQuote;
 	}
 
-	@FindBy(xpath="//input[@name='invoice_items[1][product_key]']")
-	private WebElement products;
+	@FindBy(xpath="//a[.='Clone To Invoice']")
+	private WebElement clonetoInvoice;
 
-	public WebElement getProducts() {
-		return products;
-	}
-
-	@FindBy(id="saveButton")
-	private WebElement saveButton;
-
-	public WebElement getSaveButton() {
-		return saveButton;
+	public WebElement getClonetoInvoice() {
+		return clonetoInvoice;
 	}
 
 	@FindBy(xpath="//a[contains(.,'Recurring')]//following::a[contains(.,'Recurring')]")
@@ -88,41 +78,11 @@ public class RecurringPage {
 		return newRecurringInvoice;
 	}
 
-	@FindBy(xpath="//input[@class='client-input form-control']")
-	private WebElement clientTextField;
+	@FindBy(xpath="//span[@data-bind='text: getClientDisplayName(ko.toJS(client()))']")
+	private WebElement sentclientNameText;
 
-	public WebElement getClientTextField() {
-		return clientTextField;
-	}
-
-	@FindBy(xpath="//span[@class='glyphicon glyphicon-calendar']")
-	private WebElement startDateCalendar;
-
-	public WebElement getStartDateCalendar() {
-		return startDateCalendar;
-	}
-
-	@FindBy(xpath="//td[.='5']")
-	private WebElement startDate;
-
-	public WebElement getStartDate() {
-		return startDate;
-	}
-
-
-	@FindBy(xpath="//span[@class='glyphicon glyphicon-calendar']//following::span[@class='glyphicon glyphicon-calendar']//following::span[@class='glyphicon glyphicon-calendar']//following::span[@class='glyphicon glyphicon-calendar']")
-	private WebElement endDateCalendar;
-
-	public WebElement getEndDateCalendar() {
-		return endDateCalendar;
-	}
-
-
-	@FindBy(xpath="//th[@class='next']")
-	private WebElement nextCalendar;
-
-	public WebElement getNextCalendar() {
-		return nextCalendar;
+	public WebElement getSentClientNameText() {
+		return sentclientNameText;
 	}
 
 	@FindBy(name="po_number")
@@ -135,7 +95,7 @@ public class RecurringPage {
 	@FindBy(id="recurring_due_date")
 	private WebElement recurringduedate;
 
-	public WebElement getRecurringduedate() {
+	public WebElement getRecurringDueDate() {
 		return recurringduedate;
 	}
 
@@ -146,38 +106,10 @@ public class RecurringPage {
 		return clientNameTextfield;
 	}
 
-	@FindBy(id="createClientLink")
-	private WebElement createClientLink;
-
-	public WebElement getCreateClientLink() {
-		return createClientLink;
-	}
-
-	@FindBy(id="email0")
-	private WebElement emailtextfield;
-
-	public WebElement getEmailtextfield() {
-		return emailtextfield;
-	}
-
-	@FindBy(id="phone")
-	private WebElement phonetextfield;
-
-	public WebElement getPhonetextfield() {
-		return phonetextfield;
-	}
-
-	@FindBy(id="client[currency_id]")
-	private WebElement currencylistbox;
-
-	public WebElement getCurrencylistbox() {
-		return currencylistbox;
-	}
-
 	@FindBy(xpath="//input[@class='client-input form-control']")
 	private WebElement clientinputtextfield;
 
-	public WebElement getClientinputtextfield() {
+	public WebElement getClientInputTextfield() {
 		return clientinputtextfield;
 	}
 
@@ -200,6 +132,7 @@ public class RecurringPage {
 
 	public WebElement getSaveDraftButton() {
 		return saveDraftButton;
+
 	}
 }
 
