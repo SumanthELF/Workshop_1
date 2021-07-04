@@ -45,6 +45,13 @@ public class InvoicePage extends BasePage{
 		return dueIcon;
 	}
 
+	@FindBy(id="is_amount_discount")
+	private WebElement discountButton;
+	
+	public WebElement getDiscountButton() {
+		return discountButton;
+	}
+
 	@FindBy(xpath="//th[text()='September 2021']/../../..//td[text()='15']")
 	private WebElement dueDate;
 	
