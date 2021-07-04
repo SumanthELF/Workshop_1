@@ -39,6 +39,20 @@ public class PaymentPage extends BasePage{
 	@FindBy(name="new_last_name")
 	private WebElement lastnametextfield;
 	
+	@FindBy(id="new_email")
+	private WebElement emailtextfield;
+	
+	@FindBy(linkText="Got it!")
+	private WebElement gotit;
+	
+	public WebElement getGotit() {
+		return gotit;
+	}
+
+	public WebElement getEmailtextfield() {
+		return emailtextfield;
+	}
+
 	@FindBy(id="new_password")
 	private WebElement passwordtextfield;
 	
