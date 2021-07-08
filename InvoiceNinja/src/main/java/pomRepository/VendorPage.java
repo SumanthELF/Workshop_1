@@ -32,16 +32,13 @@ public class VendorPage extends BasePage {
 		return editButton;
 	}
 
-
 	public WebElement getSaveButton() {
 		return saveButton;
 	}
 
-
 	public WebElement getNameTextBox() {
 		return nameTextBox;
 	}
-
 
 	public WebElement getNewVendorButton() {
 		return newVendorButton;
