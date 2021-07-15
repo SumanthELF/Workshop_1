@@ -19,10 +19,6 @@ public class ExpensesPage extends BasePage {
 	
 	@FindBy(xpath="//input[@placeholder='US Dollar']")
 	private WebElement currency;
-	
-	public WebElement getCurrency() {
-		return currency;
-	}
 
 	@FindBy(id="amount")
 	private WebElement amount;
@@ -42,11 +38,9 @@ public class ExpensesPage extends BasePage {
 	@FindBy(id="payment_date")
 	private WebElement payment_date ;
 	
-
 	@FindBy(xpath="//td[text()='17']")
 	private WebElement Date ;
 	
-
 	@FindBy(xpath="//th[text()='July 2021']")
 	private WebElement monthyear;
 	
@@ -55,10 +49,23 @@ public class ExpensesPage extends BasePage {
 
 	@FindBy(xpath="//td[@class='today active day']")
 	private WebElement SelectDate1;
-
-
-
 	
+	@FindBy(id="public_notes")
+	private WebElement  publicnotes;
+	
+	@FindBy(id="transaction_reference")
+	private WebElement  transaction_reference;
+	
+	@FindBy(xpath="//label[text()='Payment Type']/../..//input[@autocomplete='off']")
+	private WebElement  paymentType;
+	
+	@FindBy(xpath="//button[@type='submit']")
+	private WebElement  savebutton;
+
+	public WebElement getCurrency() {
+		return currency;
+	}
+
 	public WebElement getSelectExpenses() {
 		return SelectExpenses;
 	}
@@ -78,18 +85,6 @@ public class ExpensesPage extends BasePage {
 	public WebElement getMonthyear() {
 		return monthyear;
 	}
-
-	@FindBy(id="public_notes")
-	private WebElement  publicnotes;
-	
-	@FindBy(id="transaction_reference")
-	private WebElement  transaction_reference;
-	
-	@FindBy(xpath="//label[text()='Payment Type']/../..//input[@autocomplete='off']")
-	private WebElement  paymentType;
-	
-	@FindBy(xpath="//button[@type='submit']")
-	private WebElement  savebutton;
 
 	public WebElement getVendor() {
 		return vendor;

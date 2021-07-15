@@ -35,14 +35,13 @@ public class HomePage extends BasePage {
 	@FindBy(xpath="//a[text()='Enter Expense ']")
 	private WebElement EnterExpenses;
 	
+	@FindBy(id = "search")
+	private WebElement searchBox;
 	
 	
 	public WebElement getEnterExpenses() {
 		return EnterExpenses;
 	}
-
-	@FindBy(id = "search")
-	private WebElement searchBox;
 	
 	public WebElement getSearchBox() {
 		return searchBox;
